@@ -24,7 +24,7 @@ trap 'stopService; exit $?' EXIT SIGINT SIGKILL SIGTERM
 
 # Die alten Output-Dateien wiederherstellen
 if [ -f /docker/output/dhcpd.leases ]; then
-	cp -p /docker/utput/dhcpd.leases /var/lib/dhcp/;
+	cp -p /docker/output/dhcpd.leases /var/lib/dhcp/;
 fi;
 
 # Die neuen Eingabedatei aufbereiten

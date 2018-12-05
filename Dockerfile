@@ -19,9 +19,9 @@ RUN touch /dev/null \
 	&& apt-get update \
 	&& apt-get install -y --no-install-recommends apt-utils \
 	&& /docker/init/initService.sh \
-        && apt-get -y full-upgrade \
-        && apt-get clean \
-        && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+	&& apt-get -y full-upgrade \
+	&& apt-get clean \
+	&& rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Volumes, die nach außen gereicht werden sollen
 VOLUME ["/docker/input", "/docker/output"]
