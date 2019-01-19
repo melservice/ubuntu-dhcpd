@@ -4,8 +4,8 @@ LABEL version="1.0" \
 	description="DHCP-Server als Service auf Ubuntu-Basis" \
 	maintainer="develop@melsaesser.de"
 
-# Skripte für initialisierung des Images und Start des Containers kopieren
-ADD scripts /docker/init/
+# Die bereitgestellten Skripte und Einstellungen kopieren
+COPY rootfs /
 
 # Die aktuellen Paketlisten laden, Updates holen und Initialisierung laufen lassen,
 # danach wird wieder aufgeräumt
